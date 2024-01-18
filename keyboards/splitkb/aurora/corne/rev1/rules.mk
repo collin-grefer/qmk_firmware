@@ -17,3 +17,13 @@
 # presence of this file is required for QMK to compile it.
 
 BOOTLOADER = rp2040
+CAPS_WORD_ENABLE = yes
+RGB_MATRIX_LEDMAPS = yes
+
+ifeq ($(strip $(RGB_MATRIX_LEDMAPS)), yes)
+	SRC += rgb_matrix_ledmaps.c
+	OPT_DEFS += -DRGB_MATRIX_LEDMAPS_ENABLED
+endif
+
+SRC += utils.c
+SRC += collin.c
