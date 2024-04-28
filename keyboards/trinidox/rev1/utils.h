@@ -14,5 +14,19 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #pragma once
+#include "quantum.h"
 
-#include "rgb_matrix_ledmaps.h"
+void store_rgb_state_to_eeprom(void);
+
+typedef void (*key_press_handler)(bool);
+
+typedef struct KeyPressState KeyPressState;
+struct KeyPressState {
+        int _count;
+        void (*press)(KeyPressState *self);
+        void (*release)(KeyPressState *self);
+        void (*reset)(KeyPressState *self);
+        key_press_handler hander;
+};
+
+KeyPressState *NewKeyPressState(key_press_handler);

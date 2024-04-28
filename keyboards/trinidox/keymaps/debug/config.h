@@ -1,4 +1,4 @@
-/* Copyright 2021 Mikael Manukyan <arm.localhost@gmail.com>
+/* Copyright 2022 splitkb.com <support@splitkb.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -13,6 +13,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
 #pragma once
 
-#include "rgb_matrix_ledmaps.h"
+#ifdef RGBLIGHT_ENABLE
+#   define RGBLIGHT_EFFECT_BREATHING
+#endif

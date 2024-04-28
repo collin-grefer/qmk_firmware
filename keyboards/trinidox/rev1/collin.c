@@ -13,6 +13,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#pragma once
+#include "collin.h"
 
-#include "rgb_matrix_ledmaps.h"
+// userspace_config_t userspace_config;
+
+// void suspend_power_down_user(void) {
+// #ifdef RGB_MATRIX_ENABLE
+//     rgb_matrix_set_suspend_state(true);
+// #endif  // RGB_MATRIX_ENABLE
+// }
+
+// void suspend_wakeup_init_user(void) {
+// #ifdef RGB_MATRIX_ENABLE
+//     rgb_matrix_set_suspend_state(false);
+// #endif  // RGB_MATRIX_ENABLE
+// }
