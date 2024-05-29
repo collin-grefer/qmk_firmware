@@ -90,6 +90,11 @@
                     {"pin_a": "F6", "pin_b": "F7"}
                 ]
             }
+        },
+        "transport": {
+            "sync": {
+                "matrix_state": true
+            }
         }
     },
     "rgblight": {
